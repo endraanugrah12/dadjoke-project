@@ -3,6 +3,8 @@ import termcolor
 import requests
 from random import choice
 
+# Testing
+
 inp2 = input("Do you want to have a dad jokes? [yes/no] ")
 
 website = "https://icanhazdadjoke.com/search"
