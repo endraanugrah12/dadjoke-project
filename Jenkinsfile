@@ -5,7 +5,7 @@ pipeline {
             }
       }
     triggers {
-		pollSCM '*/5 * * * *'
+		pollSCM '* * * * *'
 	}
     stages {
         stage('Build') {
@@ -21,7 +21,9 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
+                cd app
                 python3 app.py
+                python3 app.py --name=Endra
                 '''
             }
         }
